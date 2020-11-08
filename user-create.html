@@ -167,81 +167,108 @@
                 </div>
 <!----FORM--->
     <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="col-lg-8 col-sm-8">
 <!-- ============================================================== -->
     <form>
         <!-- TEXT FIELD GROUPS -->
-        <div class="form-group">
-            <label for="name">First Name</label>
-            <input class="form-control" type="text" id="name" placeholder="First Name">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                <label for="name" class="col-form-label">First Name</label>
+                <input class="form-control" type="text" id="name" placeholder="First Name">
+            </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+            <div class="form-group">
+                <label for="last_name" class="col-form-label">Last Name</label>
+                <input class="form-control" type="text" id="last_name" placeholder="Last Name">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input class="form-control" type="email" id="email" placeholder="email address">
-            <small class="form-text text-muted">Your email will not ever be shared</small>
         </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input class="form-control" type="password" id="password" placeholder="Password">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input class="form-control" type="email" id="email" placeholder="Email Address">
+                    <small class="form-text text-muted">Your email will not ever be shared</small>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input class="form-control" type="text" id="mobile" placeholder="Mobile Number">
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <h4>Gender</h4>
-            <label class="custom-control custom-radio custom-control-inline">
-                <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Male</span>
-            </label>
-            <label class="custom-control custom-radio custom-control-inline">
-                <input type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Female</span>
-            </label>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input class="form-control" type="password" id="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                    <label for="password">Password Confirmation</label>
+                    <input class="form-control" type="password" id="password_comfirmation" placeholder="Re-enter Password">
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <!-- CHECKBOX -->
+                <div class="form-group">
+                    <label>Gender</label><br>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Male</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Female</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <!-- SELECT -->
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select name="roleid" id="role" class="custom-select" required="required">
+                        <!-- <option value="select" selected="selected">Select</option>-->
+                         <option value="none" selected disabled hidden>Select</option>
+                         <option value="admin">Admin</option>
+                         <option values="manager">Manager</option>
+                         <option value="employee">Employee</option>
+                     </select>
+                 </div>
+             </div>
+         </div>
+         <div align="right">
+             <button href="#" class="btn btn-success" type="submit">Save</button>
+         </div>
+         <br>
+         <br>
+         </form>
+        </div>
+ <!-- ============================================================== -->
+        <!--to make the table long for the full screen-->
+            <div class="col-lg-12 col-sm-12">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header">
+                            <h2 class="pageheader-title">User List </h2>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <label for="name">Last Name</label>
-            <input class="form-control" type="text" id="last_name" placeholder="Last Name">
-        </div>
-        <div class="form-group">
-            <label for="mobile">Mobile Number</label>
-            <input class="form-control" type="text" id="mobile" placeholder="Mobile Number">
-        </div>
-        <div class="form-group">
-            <label for="password">Password Confirmation</label>
-            <input class="form-control" type="password" id="password_comfirmation" placeholder="Re-enter password">
-        </div>
-        <!-- SELECT -->
-        <div class="form-group">
-            <label for="role">Role</label>
-            <select class="form-control" id="role">
-                <option>Admin</option>
-                <option>Manager</option>
-                <option>Employee</option>
-            </select>
-        </div>
-
-        <br>
-        <br>
-
-        <button class="btn btn-success" type="save">Save</button>
-
-        </form>
-                    <br>
-<!-- ============================================================== -->
-                    <div class="container">
-                                <div class="col-xl-12">
-                                            <div class="col-xl-12 col-lg-12 col-md-14 col-sm-12 col-12">
-                                                <div class="page-header" id="top">
-                                                    <h2 class="pageheader-title">User List </h2>
-                                                </div>
-                                            </div>
-                                        </div>
 <!-- STRIPED TABLE -->
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>E-Mail(username)</th>
-                            <th>Gender</th>
-                            <th>Phone</th>
-                            <th>Role</th>
-                            <th>Action</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">E-Mail(username)</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -251,9 +278,9 @@
                             <td>Male</td>
                             <td>201-345-7546</td>
                             <td>Admin</td>
-                            <td>
-                                <button class="btn btn-warning" type="button">Update</button>
-                                <button class="btn btn-danger" type="button">Delete</button>
+                            <td class="actions">
+                                <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
                             </td>
                         </tr>
                         <tr>
@@ -262,9 +289,9 @@
                             <td>Male</td>
                             <td>401-432-5643</td>
                             <td>Employee</td>
-                            <td>
-                                <button class="btn btn-warning" type="button">Update</button>
-                                <button class="btn btn-danger" type="button">Delete</button>
+                            <td class="actions">
+                                <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
                             </td>
                         </tr>
                         <tr>
@@ -273,9 +300,9 @@
                             <td>Female</td>
                             <td>347-543-5345</td>
                             <td>Manager</td>
-                            <td>
-                                <button class="btn btn-warning" type="button">Update</button>
-                                <button class="btn btn-danger" type="button">Delete</button>
+                            <td class="actions">
+                                <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
                             </td>
                         </tr>
                         </tbody>
@@ -333,6 +360,7 @@
             </div>
         </nav>
     </div>
+<br>
     <!-- ============================================================== -->
     <!-- end navbar -->
     <!-- ============================================================== -->
@@ -353,15 +381,9 @@
     <!-- ============================================================== -->
     <!-- footer -->
     <!-- ============================================================== -->
-    <div class="bg-white p-3">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-dark text-center">
-                    Copyright © 2018 Concept. All rights reserved. <a href="https://colorlib.com/wp/">Colorlib</a>.
-                </div>
-            </div>
-        </div>
-    </div>
+                <footer class="page-footer font-small blue fixed-bottom">
+                    <div class="footer-copyright text-center py-3">© 2020 Cybertek – All Rights Reserved</div>
+                </footer>
     <!-- ============================================================== -->
 </div>
 </div>
